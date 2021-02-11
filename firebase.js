@@ -16,7 +16,9 @@
 
 document.getElementById("submit").addEventListener("click", function(){
 var see = document.getElementById("input").value
-
+if(document.getElementById("input").value==""){
+	alert("You Must Submit Text")
+}else{
 
   db.collection("ocean").add({
     bottle: see,
@@ -51,4 +53,5 @@ textChange.innerHTML = `<h4 id="shore"> ${breakaprt[stringRand]}</h4>`
 var casted = document.getElementById("cast");
 casted.innerHTML = `<h2 id="cast"> You've recived a bottle </h2>`
 });
+};
 })
